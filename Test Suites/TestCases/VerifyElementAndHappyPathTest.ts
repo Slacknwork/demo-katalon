@@ -15,14 +15,14 @@
       <guid>cb2758cb-4495-41cd-ab7b-fd85882a9092</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_01 Verify elements in login form</testCaseId>
+      <testCaseId>Test Cases/TC01_VerifyLoginFormElements</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>eaebf0a8-4fa4-404e-9a74-f02406e7e018</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_04 Verify marked password</testCaseId>
+      <testCaseId>Test Cases/TC02_VerifyMarkedPassword</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -41,7 +41,7 @@
       <guid>1203e9cf-e374-45ca-b9f3-ad618dfde14b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_05 Success login</testCaseId>
+      <testCaseId>Test Cases/TC03_VerifySuccessfulLogin</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -60,7 +60,7 @@
       <guid>6eba5810-f01e-44fa-91eb-cb4b90ca1646</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_18 Check Register button</testCaseId>
+      <testCaseId>Test Cases/TC09_VerifyRegisterButtonFunction</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

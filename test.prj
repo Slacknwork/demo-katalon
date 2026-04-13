@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>test</name>
+   <name>demo</name>
    <tag></tag>
    <UUID>7d2f73f5-da11-4351-b9b3-249b75bb5a10</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
@@ -9,9 +9,9 @@
    <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>ENTERPRISE</modifiedEdition>
-   <modifiedVersion>11.1.0</modifiedVersion>
+   <modifiedVersion>11.1.1</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>C:\Job\Sacombank\Katalon\Project\test\test.prj</projectFileLocation>
+   <projectFileLocation>C:\Job\Sacombank\Katalon\Project\demo-katalon\test.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

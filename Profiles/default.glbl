@@ -7,112 +7,105 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://demo5.cybersoft.edu.vn/'</initValue>
-      <name>UrlHomePage</name>
+      <name>URL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>1</initValue>
-      <name>Timeout</name>
+      <name>TIMEOUT</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>10</initValue>
-      <name>LongTimeout</name>
+      <name>LONGTIMEOUT</name>
       <protected>false</protected>
       <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Email'</initValue>
-      <name>EmailField</name>
+      <initValue>'SUCCESS'</initValue>
+      <name>SUCCESS</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Password'</initValue>
-      <name>PasswordField</name>
+      <initValue>'FAILURE'</initValue>
+      <name>FAILURE</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Success'</initValue>
-      <name>SuccessStatus</name>
+      <initValue>'EMPTY'</initValue>
+      <name>EMPTY</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Failed'</initValue>
-      <name>FailedStatus</name>
+      <initValue>'WRONG_EMAIL'</initValue>
+      <name>WRONG_EMAIL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'WrongEmail'</initValue>
-      <name>WrongEmailStatus</name>
+      <initValue>'INVALID_EMAIL'</initValue>
+      <name>INVALID_EMAIL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'InvalidEmail'</initValue>
-      <name>InvalidEmailStatus</name>
+      <initValue>'EMPTY_EMAIL'</initValue>
+      <name>EMPTY_EMAIL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'EmptyEmail'</initValue>
-      <name>EmptyEmailStatus</name>
+      <initValue>'LONG_EMAIL'</initValue>
+      <name>LONG_EMAIL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'LongEmail'</initValue>
-      <name>LongEmailStatus</name>
+      <initValue>'WRONG_PASSWORD'</initValue>
+      <name>WRONG_PASSWORD</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'WrongPassword'</initValue>
-      <name>WrongPasswordStatus</name>
+      <initValue>'INVALID_PASSWORD'</initValue>
+      <name>INVALID_PASSWORD</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'InvalidPassword'</initValue>
-      <name>InvalidPasswordStatus</name>
+      <initValue>'EMPTY_PASSWORD'</initValue>
+      <name>EMPTY_PASSWORD</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'EmptyPassword'</initValue>
-      <name>EmptyPasswordStatus</name>
+      <initValue>'LONG_PASSWORD'</initValue>
+      <name>LONG_PASSWORD</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'LongPassword'</initValue>
-      <name>LongPasswordStatus</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'ShortPassword'</initValue>
-      <name>ShortPasswordStatus</name>
+      <initValue>'SHORT_PASSWORD'</initValue>
+      <name>SHORT_PASSWORD</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
