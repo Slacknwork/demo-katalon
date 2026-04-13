@@ -9,25 +9,29 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-
-
+//General steps to use in page
 public class GeneralUtils {
 	
 	//Open login form in home page
 	@Keyword
 	public static void openLoginForm() {
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/img_Avatar'))
+		//Click avatar icon
+		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/icon_Avatar'))
 		
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/ImgAvatarMenu/button_Login'))
+		//Click login button in popup menu
+		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarMenu/button_Login'))
 	}
 	
 	//Open register form through in home page
 	@Keyword
 	public static void openRegisterFormThroughLoginForm() {
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/img_Avatar'))
+		//Click avatar icon
+		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/icon_Avatar'))
 		
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/ImgAvatarMenu/button_Login'))
+		//Click login button in popup menu
+		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarMenu/button_Login'))
 		
+		//Click register button in login form
 		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/button_Register'))
 	}
 	

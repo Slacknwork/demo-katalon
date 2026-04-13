@@ -4,30 +4,25 @@
    <name>icon_Close</name>
    <tag></tag>
    <elementGuidId>398eca78-d007-4195-8f7c-1b8b49dbcd9f</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='ant-modal-content'][.//h2[text()='Đăng nhập']]//button[@aria-label='Close']</value>
+         <value>//div[@class='ant-modal-content'][.//h2[text()='Đăng nhập']]/button[@class='ant-modal-close']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>IMAGE</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

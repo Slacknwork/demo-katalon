@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>icon_Close</name>
+   <name>button_Login</name>
    <tag></tag>
-   <elementGuidId>3818650e-46a9-46c0-8d2f-e4ff49f33982</elementGuidId>
+   <elementGuidId>d3914ab4-8bff-4bb2-9094-7eb831e30b31</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//button[@class='block text-center px-5 w-full rounded py-2 text-sm text-gray-700 hover:bg-gray-300 ' and text()='Đăng nhập']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='ant-modal-content'][.//h2[text()='Đăng ký tài khoản']]//button[@aria-label='Close']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

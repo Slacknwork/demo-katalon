@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>icon_Close</name>
+   <name>icon_Avatar</name>
    <tag></tag>
-   <elementGuidId>3818650e-46a9-46c0-8d2f-e4ff49f33982</elementGuidId>
+   <elementGuidId>14413c97-cbd8-4358-aede-c261f530a19a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='ant-modal-content'][.//h2[text()='Đăng ký tài khoản']]//button[@aria-label='Close']</value>
+         <value>//img[@class='h-10' and @src='https://cdn-icons-png.flaticon.com/512/6596/6596121.png']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
