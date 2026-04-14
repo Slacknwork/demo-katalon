@@ -30,7 +30,7 @@ class LoginForm {
 	@BeforeTestCase
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 		WebUI.openBrowser(GlobalVariable.URL)
-		WebUI.waitForPageLoad(GlobalVariable.LONGTIMEOUT, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.LONG_TIMEOUT, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	/**

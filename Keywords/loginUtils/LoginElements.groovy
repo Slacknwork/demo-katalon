@@ -49,12 +49,12 @@ static def clickElement(TestObject to) {
 @Keyword
 static def fillLoginField(def email, def password) {
 	//Wait for email field visibility and fill it
-	TestObject emailTextbox = findTestObject('LoginFormElements/input_email');
+	TestObject emailTextbox = findTestObject('LoginFormElements/input_email')
 	WebUI.waitForElementVisible(emailTextbox, GlobalVariable.LONG_TIMEOUT)
 	WebUI.setText(emailTextbox, email)
 	
 	//Wait for password field visibility and fill it
-	TestObject passwordTextbox = findTestObject('LoginFormElements/input_Password');
+	TestObject passwordTextbox = findTestObject('LoginFormElements/input_Password')
 	WebUI.waitForElementVisible(passwordTextbox, GlobalVariable.LONG_TIMEOUT)
 	WebUI.setEncryptedText(passwordTextbox, password)
  
