@@ -13,7 +13,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-//Interact  and test with login elements
+//Interact and test with login elements
 class LoginElements {
  /**
  * Refresh browser
@@ -35,7 +35,7 @@ static def clickElement(TestObject to) {
     try {
         WebElement element = WebUI.findWebElement(to);
         KeywordUtil.logInfo("Clicking element")
-		WebUI.waitForElementClickable(to, GlobalVariable.LONGTIMEOUT)
+		WebUI.waitForElementClickable(to, GlobalVariable.LONG_TIMEOUT)
         element.click()
         KeywordUtil.markPassed("Element has been clicked")
     } catch (WebElementNotFoundException e) {
@@ -50,19 +50,19 @@ static def clickElement(TestObject to) {
 static def fillLoginField(def email, def password) {
 	//Wait for email field visibility and fill it
 	TestObject emailTextbox = findTestObject('LoginFormElements/input_email');
-	WebUI.waitForElementVisible(emailTextbox, GlobalVariable.LONGTIMEOUT)
+	WebUI.waitForElementVisible(emailTextbox, GlobalVariable.LONG_TIMEOUT)
 	WebUI.setText(emailTextbox, email)
 	
 	//Wait for password field visibility and fill it
 	TestObject passwordTextbox = findTestObject('LoginFormElements/input_Password');
-	WebUI.waitForElementVisible(passwordTextbox, GlobalVariable.LONGTIMEOUT)
+	WebUI.waitForElementVisible(passwordTextbox, GlobalVariable.LONG_TIMEOUT)
 	WebUI.setEncryptedText(passwordTextbox, password)
  
 }
 	
 //Navigate to home page and test login function in login form 
 @Keyword
-public static void testLoginInLoginForm(def email, def password) {
+static def implementLoginTest(def email, def password) {
 	//Step 1: Open login form
 	generalUtils.GeneralUtils.openLoginForm()
 
