@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-////This test case verify visibility of error message when input data format is invalid
+//This test case verify visibility of error message when input data format is invalid
 
 /**This function execute:
  * Step 1: Navigate to home page

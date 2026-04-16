@@ -97,40 +97,79 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 //Verify message visibility based on expected result
 @Keyword
 static def verifyMessageOfLoginTest(def expectedResult) {
-	if (expectedResult.equals(GlobalVariable.SUCCESS)) {
-		//verify 'login successfully' message
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
-		
-		//verify user name visibility after login
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
-	}else if (expectedResult.equals(GlobalVariable.FAILURE) || 
-		expectedResult.equals(GlobalVariable.WRONG_EMAIL) || 
-		expectedResult.equals(GlobalVariable.WRONG_PASSWORD)) {
-		
-		//Verify 'Wrong Email and Password' message visibility based on expected result
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-	}else if (expectedResult.equals(GlobalVariable.MULTIPLE_FAILURE) || 
-		expectedResult == GlobalVariable.INVALID_PASSWORD ||
-		expectedResult == GlobalVariable.LONG_EMAIL ||
-		expectedResult == GlobalVariable.LONG_PASSWORD ||
-		expectedResult == GlobalVariable.SHORT_PASSWORD ) {
-		
-		//Verify 'Wrong Email and Password' message is not visible based on expected result
-		WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
-	}else if (expectedResult.equals(GlobalVariable.EMPTY)) {
-		/**Verify 'No empty field!' message in based on expected result
-		 * The error message is shown in their respectively empty field
-		 * In EMPTY case, both email and password field is empty so need to error message for both
-		 **/
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-	}else if (expectedResult.equals(GlobalVariable.EMPTY_EMAIL)) {
-		
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
-	}else if (expectedResult.equals(GlobalVariable.EMPTY_PASSWORD)) {
-		
-		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-	}
+	
+	//nho fix FailureHandling
+	
+	switch (expectedResult) {
+		case GlobalVariable.SUCCESS:
+			//verify 'login successfully' message and user name visibility 
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
+			break;
+		case GlobalVariable.FAILURE:
+		case GlobalVariable.WRONG_EMAIL:
+		case GlobalVariable.WRONG_PASSWORD:
+			//Verify 'Wrong Email and Password' message visibility
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+			break;
+		case GlobalVariable.MULTIPLE_FAILURE:
+		case GlobalVariable.INVALID_PASSWORD:
+		case GlobalVariable.LONG_EMAIL:
+		case GlobalVariable.LONG_PASSWORD:
+		case GlobalVariable.SHORT_PASSWORD:
+			//Verify 'Wrong Email and Password' message is not visible
+			WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
+			break;
+		case GlobalVariable.EMPTY:
+			/**Verify 'No empty field!' message in based on expected result
+		 	* The error message is shown in their respectively empty field
+		 	* In EMPTY case, both email and password field is empty so need to error message for both
+		 	**/
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+			break;
+		case GlobalVariable.EMPTY_EMAIL:
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
+			break;
+		case GlobalVariable.EMPTY_PASSWORD:
+			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+			break;
+		}
+	
+//	if (expectedResult.equals(GlobalVariable.SUCCESS)) {
+//		//verify 'login successfully' message
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
+//		
+//		//verify user name visibility after login
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
+//	}else if (expectedResult.equals(GlobalVariable.FAILURE) || 
+//		expectedResult.equals(GlobalVariable.WRONG_EMAIL) || 
+//		expectedResult.equals(GlobalVariable.WRONG_PASSWORD)) {
+//		
+//		//Verify 'Wrong Email and Password' message visibility based on expected result
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+//	}else if (expectedResult.equals(GlobalVariable.MULTIPLE_FAILURE) || 
+//		expectedResult == GlobalVariable.INVALID_PASSWORD ||
+//		expectedResult == GlobalVariable.LONG_EMAIL ||
+//		expectedResult == GlobalVariable.LONG_PASSWORD ||
+//		expectedResult == GlobalVariable.SHORT_PASSWORD ) {
+//		
+//		//Verify 'Wrong Email and Password' message is not visible based on expected result
+//		WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
+//	}else if (expectedResult.equals(GlobalVariable.EMPTY)) {
+//		/**Verify 'No empty field!' message in based on expected result
+//		 * The error message is shown in their respectively empty field
+//		 * In EMPTY case, both email and password field is empty so need to error message for both
+//		 **/
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+//	}else if (expectedResult.equals(GlobalVariable.EMPTY_EMAIL)) {
+//		
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
+//	}else if (expectedResult.equals(GlobalVariable.EMPTY_PASSWORD)) {
+//		
+//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+//	}
 	
 	
 		
