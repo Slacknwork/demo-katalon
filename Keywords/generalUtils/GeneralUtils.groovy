@@ -4,9 +4,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.objectspy.element.WebElement
 
 import internal.GlobalVariable
 
@@ -36,13 +34,45 @@ public class GeneralUtils {
 		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/button_Register'))
 	}
 	
+	//Verify elements is visible
+	@Keyword
+	static def isElementVisble(def to) {
+		//If to is list then verify each element in list
+		//If not then verify only to
+		if (to instanceof List) {
+			for (def object: to) {
+				WebUI.verifyElementVisible(findTestObject(object))
+			}
+		} else {
+			WebUI.verifyElementVisible(findTestObject(to))
+		}
+	}
+	
+	//Verify elements is not visible
+	@Keyword
+	static def isElementNotVisble(def to) {
+		//If to is list then verify each element in list
+		//If not then verify only to
+		if (to instanceof List) {
+			for (def object: to) {
+				WebUI.verifyElementNotVisible(findTestObject(object))
+			}
+		} else {
+			WebUI.verifyElementNotVisible(findTestObject(to))
+		}
+	}
 	
 	@Keyword
-	static def isElementVisble(TestObject to) {
-		WebElement element = WebUI.findWebElement(to);
-		if (to != null) {
-			WebUI.verifyElementVisible(to)
+	static def getElementsFilePath(def filePath) {
+		List<String> elementsList = new ArrayList<String>()
+		new File(filePath).eachFile { file -> 
+			if (file.getName().endsWith(".rs")) {
+				String path = file.getPath().replace("\\", "/").replace("Object Repository/", "").replace(".rs", "")
+				System.out.println(path)
+				elementsList.add(path)
+			}
 		}
+		return elementsList
 	}
 	
 	//Verify elements in page based on forms
@@ -101,5 +131,7 @@ public class GeneralUtils {
 		}
 		
 	}
+	
+	
 	
 }

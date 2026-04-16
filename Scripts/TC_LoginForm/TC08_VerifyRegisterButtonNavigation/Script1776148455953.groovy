@@ -27,6 +27,6 @@ import org.openqa.selenium.Keys as Keys
 generalUtils.GeneralUtils.openRegisterFormInLoginForm()
 
 //verify elements of register form
-generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.REGISTER_FORM)
+loginUtils.LoginElements.verifyFormElements(GlobalVariable.REGISTER_FORM)
 
 

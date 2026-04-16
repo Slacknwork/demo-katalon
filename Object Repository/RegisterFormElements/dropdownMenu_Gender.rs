@@ -4,30 +4,25 @@
    <name>dropdownMenu_Gender</name>
    <tag></tag>
    <elementGuidId>b355d3d4-f3c1-43de-bebc-562fd82752e8</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//input[@id = 'gender' and @role = 'combobox']</value>
+         <key>IMAGE</key>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//input[@id = 'gender' and @role = 'combobox']/ancestor::div[@name='gender']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

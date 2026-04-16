@@ -12,6 +12,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import generalUtils.GeneralUtils
 import internal.GlobalVariable
 
 //Interact and test with login elements
@@ -94,6 +95,21 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 	}
 }
 
+@Keyword
+static def verifyFormElements(def form) {
+	switch(form) {
+		case GlobalVariable.LOGIN_FORM:
+			List<String> loginFormElements = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
+			generalUtils.GeneralUtils.isElementVisble(loginFormElements)
+			break
+		case GlobalVariable.REGISTER_FORM:
+			List<String> registerFormElements = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
+			generalUtils.GeneralUtils.isElementVisble(registerFormElements)
+			break
+	}
+		
+}
+
 //Verify message visibility based on expected result
 @Keyword
 static def verifyMessageOfLoginTest(def expectedResult) {
@@ -104,7 +120,7 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 		case GlobalVariable.SUCCESS:
 			//verify 'login successfully' message and user name visibility 
 			WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyElementVisible(findTestObject('ImgAvatarPopupMenu/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
 			break;
 		case GlobalVariable.FAILURE:
 		case GlobalVariable.WRONG_EMAIL:
@@ -141,7 +157,7 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 //		WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
 //		
 //		//verify user name visibility after login
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
+//		WebUI.verifyElementVisible(findTestObject('ImgAvatarPopupMenu/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
 //	}else if (expectedResult.equals(GlobalVariable.FAILURE) || 
 //		expectedResult.equals(GlobalVariable.WRONG_EMAIL) || 
 //		expectedResult.equals(GlobalVariable.WRONG_PASSWORD)) {

@@ -4,30 +4,25 @@
    <name>text_Username</name>
    <tag></tag>
    <elementGuidId>9261db7b-bd19-40a2-a2ee-f6ec11c13b75</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//button[@id='user-menu-button']/img/following-sibling::span[normalize-space(text())]</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

@@ -26,6 +26,6 @@ import org.openqa.selenium.Keys as Keys
 generalUtils.GeneralUtils.openLoginForm()
 
 //verify elements of login form
-generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
-
+//generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
+loginUtils.LoginElements.verifyFormElements(GlobalVariable.LOGIN_FORM)
 
