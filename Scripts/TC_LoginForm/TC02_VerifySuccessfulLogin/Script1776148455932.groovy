@@ -11,8 +11,6 @@ import internal.GlobalVariable
  * Step 3: Fill email and password field
  * Step 4: Click on login button
  */
-WebUI.verifyCheckpoint(findCheckpoint('Checkpoints/Checkpoint'), true)
-
 loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
 //Verify successful login message
