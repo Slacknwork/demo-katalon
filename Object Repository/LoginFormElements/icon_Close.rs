@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='ant-modal-content'][.//h2[text()='Đăng nhập']]/button[@class='ant-modal-close']</value>
+         <value>//button[@type='button' and @aria-label='Close'][..//h2[text()='Đăng nhập']]</value>
       </entry>
       <entry>
          <key>IMAGE</key>

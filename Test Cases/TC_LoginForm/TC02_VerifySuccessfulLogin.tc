@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC06_VerifyEmptyInput</name>
+   <name>TC02_VerifySuccessfulLogin</name>
    <tag></tag>
    <comment></comment>
    <origin>WEB_RECORDER</origin>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>61a62f27-e848-48a7-98b8-4d3e1b30d0b7</testCaseGuid>
+   <testCaseGuid>b23ec841-fd9c-4f46-b913-8425e1014590</testCaseGuid>
    <testDataLinks>
       <combinationType>ONE</combinationType>
-      <id>3b0d6301-f5b8-4279-b62f-9b80a5cac814</id>
+      <id>f766fd9b-bee5-411a-8900-10cb9c8c5be9</id>
       <iterationEntity>
          <iterationType>SPECIFIC</iterationType>
-         <value>3,6,10</value>
+         <value>1</value>
       </iterationEntity>
       <testDataId>Data Files/LoginData</testDataId>
    </testDataLinks>
    <variableLinks>
-      <testDataLinkId>3b0d6301-f5b8-4279-b62f-9b80a5cac814</testDataLinkId>
+      <testDataLinkId>f766fd9b-bee5-411a-8900-10cb9c8c5be9</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>Email</value>
-      <variableId>c6b13a8b-780b-4fa5-92be-3c785a9e7151</variableId>
+      <variableId>10a909e6-060c-46b9-b5f3-e128fbdc2161</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b0d6301-f5b8-4279-b62f-9b80a5cac814</testDataLinkId>
+      <testDataLinkId>f766fd9b-bee5-411a-8900-10cb9c8c5be9</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>Password</value>
-      <variableId>bf5136c1-141e-4739-bd5d-a27a65509e9d</variableId>
+      <variableId>8c14bff4-5e74-4164-b247-619664c3779a</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b0d6301-f5b8-4279-b62f-9b80a5cac814</testDataLinkId>
+      <testDataLinkId>f766fd9b-bee5-411a-8900-10cb9c8c5be9</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>ExpectedResult</value>
-      <variableId>3a85d190-cf08-46fc-b394-1a77d4997ee0</variableId>
+      <variableId>0e9d8a7e-f84c-42c8-90bf-00c005a15602</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>c6b13a8b-780b-4fa5-92be-3c785a9e7151</id>
+      <id>10a909e6-060c-46b9-b5f3-e128fbdc2161</id>
       <masked>false</masked>
       <name>email</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>bf5136c1-141e-4739-bd5d-a27a65509e9d</id>
+      <id>8c14bff4-5e74-4164-b247-619664c3779a</id>
       <masked>false</masked>
       <name>password</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>3a85d190-cf08-46fc-b394-1a77d4997ee0</id>
+      <id>0e9d8a7e-f84c-42c8-90bf-00c005a15602</id>
       <masked>false</masked>
       <name>expectedResult</name>
    </variable>

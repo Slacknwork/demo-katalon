@@ -19,29 +19,10 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>eaebf0a8-4fa4-404e-9a74-f02406e7e018</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC02_VerifyMarkedPassword</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>b08656a9-9f8c-4e73-bec9-b03b8430e170</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>0ff400c7-0436-4f71-8807-bfc18a1a7725</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
       <guid>1203e9cf-e374-45ca-b9f3-ad618dfde14b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC03_VerifySuccessfulLogin</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC02_VerifySuccessfulLogin</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -66,7 +47,7 @@
       <guid>6eba5810-f01e-44fa-91eb-cb4b90ca1646</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC09_VerifyRegisterButtonFunction</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC08_VerifyRegisterButtonNavigation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

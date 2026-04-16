@@ -10,14 +10,14 @@
          <value>//div[@class = 'ant-message-custom-content ant-message-error' and (text() = 'Email hoặc mật khẩu không đúng !' or . = 'Email hoặc mật khẩu không đúng !')]</value>
       </entry>
       <entry>
+         <key>XPATH</key>
+         <value>//div[./span[@role='img' and @aria-label='close-circle']][./span[text()='Email hoặc mật khẩu không đúng !']]</value>
+      </entry>
+      <entry>
          <key>IMAGE</key>
       </entry>
       <entry>
          <key>CSS</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//span[text()='Email hoặc mật khẩu không đúng !']/ancestor::div[@class = 'ant-message-custom-content ant-message-error']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

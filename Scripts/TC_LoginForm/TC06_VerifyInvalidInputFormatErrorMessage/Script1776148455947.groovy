@@ -17,15 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//This test case verify elements of login form
+////This test case verify visibility of error message when input data format is invalid
 
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
+ * Step 3: Fill email and password field
+ * Step 4: Click on login button
  */
-generalUtils.GeneralUtils.openLoginForm()
+loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-//verify elements of login form
-generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
+//Verify invalid message visibility based on expected result
+loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
+
+
+
 
 

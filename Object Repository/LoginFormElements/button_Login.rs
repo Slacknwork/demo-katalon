@@ -6,12 +6,12 @@
    <elementGuidId>b5c2bd70-c185-491e-a0ae-8125a5a5202c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@type='submit' and text()='Đăng nhập']</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@type='submit' and text()='Đăng nhập']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

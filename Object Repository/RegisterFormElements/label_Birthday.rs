@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for = 'birthday']/child::span[text()='Birthday']</value>
+         <value>//label[@for = 'birthday']/span[text()='Birthday']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

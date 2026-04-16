@@ -4,30 +4,25 @@
    <name>message_LoginSuccessfully</name>
    <tag></tag>
    <elementGuidId>813d1cf9-08f7-4882-b73e-0d142fc5563f</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[text()='Đăng nhập thành công']/ancestor::div[@class = 'ant-message-custom-content ant-message-success']</value>
+         <value>//div[./span[@role='img' and @aria-label='check-circle']][./span[text()='Đăng nhập thành công']]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>IMAGE</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

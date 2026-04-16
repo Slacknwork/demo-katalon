@@ -17,21 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-/**This function execute:
- * Step 1: Navigate to home page
- * Step 2: Open Login form
- */
-generalUtils.GeneralUtils.openLoginForm()
+//This test case verify visibility of error message when input invalid datas multiple times
 
-/**Execute these steps 3 times repeatedly:
- * Step 4: Fill email and password field with invalid input
- * Step 2: Click login button
- */
-for (int i = 0; i < 3; i++) {
-	loginUtils.LoginElements.fillLoginField(email, password)
-	loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/button_Login'))
-}
+// Execute login action 3 times
+loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.MULTIPLE_TRIES)
 
-//Verify 'Wrong Email and Password' message isn't visible
-WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
+//Verify 'Wrong Email and Password' message isn't visible after multiple login failed
+loginUtils.LoginElements.verifyMessageOfLoginTest(GlobalVariable.MULTIPLE_FAILURE)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC09_VerifyRegisterButtonFunction</name>
+   <name>TC08_VerifyRegisterButtonNavigation</name>
    <tag></tag>
    <comment></comment>
    <origin>WEB_RECORDER</origin>

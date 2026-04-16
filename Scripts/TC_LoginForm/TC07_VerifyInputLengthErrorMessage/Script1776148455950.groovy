@@ -17,23 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//This test case verify visibility of error message when input data length is invalid
+
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
  * Step 3: Fill email and password field
  * Step 4: Click on login button
  */
-loginUtils.LoginElements.implementLoginTest(email, password)
+loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-/**Verify Invalid length message visibility based on expected result
- * By verify 'wrong email and message' message visibility,
- * if this message is visible then Invalid length message is not exist
+/**Verify 'Invalid length' message visibility based on expected result
+ * By verify 'wrong email and message' message visibility
+ * if this message is visible then 'Invalid length' message is not visible
  **/
-if (expectedResult == GlobalVariable.LONG_EMAIL) {
-    WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-} else if (expectedResult == GlobalVariable.LONG_PASSWORD) {
-    WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-} else if (expectedResult == GlobalVariable.SHORT_PASSWORD) {
-    WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-}
+loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
+
+
 

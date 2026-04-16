@@ -15,7 +15,7 @@
       <guid>0f01f091-1a6c-4f56-850a-3814c69cd77f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC04_VerifyWrongDataInputErrorMessage</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC03_VerifyIncorrectInputErrorMessage</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -37,10 +37,10 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>67a5872f-7c35-4f9f-83b9-e6340ab71564</guid>
+      <guid>9a7135e2-2d27-4e5d-9f6c-4f7ab1b01a31</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC05_VerifyInvalidInputMutipleTimes</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC04_VerifyMultipleInvalidInput</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -65,7 +65,7 @@
       <guid>c1d80efb-48f8-4c11-906d-0c9c06e04f4b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC06_VerifyEmptyInput</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC05_VerifyEmptyFieldErrorMessage</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -90,7 +90,7 @@
       <guid>99f83ad2-e6cb-488b-aed9-a80df2eb5de6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC07_VerifyInvalidInputFormat</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC06_VerifyInvalidInputFormatErrorMessage</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -115,7 +115,7 @@
       <guid>85b91a33-a47d-47c5-a77b-b9199d9a4cba</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC_LoginForm/TC08_VerifyInputLength</testCaseId>
+      <testCaseId>Test Cases/TC_LoginForm/TC07_VerifyInputLengthErrorMessage</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>

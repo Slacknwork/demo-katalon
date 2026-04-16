@@ -17,26 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//This test case verify visibility of error message when input field is empty
+
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
  * Step 3: Fill email and password field
  * Step 4: Click on login button
  */
-loginUtils.LoginElements.implementLoginTest(email, password)
+loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-//Verify invalid message visibility based on expected result
-if (expectedResult == GlobalVariable.INVALID_EMAIL) {
-	//Verify 'Invalid Email' message visibility
-	WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_InvalidEmailFormat'), FailureHandling.CONTINUE_ON_FAILURE)
-}else if (expectedResult == GlobalVariable.INVALID_PASSWORD) {
-	/**Verify Invalid password message visibility
-	* By verify other 'wrong email and message' message visibility,
-	* if this message is visible then Invalid message is not exist
-	**/
-	WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-
+/**Verify 'No empty field!' message in based on expected result
+ * The error message is shown in their respectively empty field
+ * In EMPTY case, both email and password field is empty so need to error message for both
+ **/
+loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 
 
