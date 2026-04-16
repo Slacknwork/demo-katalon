@@ -17,15 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//This test case verify elements of login form
-
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
+ * Step 3: Fill email and password field
+ * Step 4: Click on login button
  */
-generalUtils.GeneralUtils.openLoginForm()
+loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.MULTIPLE_TRIES)
 
-//verify elements of login form
-generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
-
+//Verify 'Wrong Email and Password' message is not visibe after mutiple login failed
+loginUtils.LoginElements.verifyMessageOfLoginTest(GlobalVariable.MULTIPLE_FAILURE)
 

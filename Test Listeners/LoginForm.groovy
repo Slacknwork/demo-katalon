@@ -26,9 +26,10 @@ class LoginForm {
 	/**
 	 * Executes before every test case starts.
 	 * @param testCaseContext related information of the executed test case.
+	 * Navigate to home page and wait for page load
 	 */
 	@BeforeTestCase
-	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+	def beforeTestCase(TestCaseContext testCaseContext) {
 		WebUI.openBrowser(GlobalVariable.URL)
 		WebUI.waitForPageLoad(GlobalVariable.LONG_TIMEOUT, FailureHandling.CONTINUE_ON_FAILURE)
 	}
@@ -36,9 +37,10 @@ class LoginForm {
 	/**
 	 * Executes after every test case ends.
 	 * @param testCaseContext related information of the executed test case.
+	 * Close browser after test case end
 	 */
 	@AfterTestCase
-	def sampleAfterTestCase(TestCaseContext testCaseContext) {
+	def afterTestCase(TestCaseContext testCaseContext) {
 		WebUI.closeBrowser()
 	}
 }

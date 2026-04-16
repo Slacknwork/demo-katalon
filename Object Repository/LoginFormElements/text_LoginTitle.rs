@@ -6,12 +6,11 @@
    <elementGuidId>7f37b033-07db-4025-bac5-757eff2444b1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//h2[@class='font-bold text-3xl text-center' and text()='Đăng nhập']</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@role='dialog' and @aria-modal='true']//h2[text()='Đăng nhập']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

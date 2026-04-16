@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//img[@class='h-10' and @src='https://cdn-icons-png.flaticon.com/512/6596/6596121.png']</value>
+         <value>//button[preceding-sibling::div[@id='user-dropdown']][following-sibling::button[@type='button']]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

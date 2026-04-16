@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC07_VerifyInvalidInputFormat</name>
+   <name>TC07_VerifyInputLengthErrorMessage</name>
    <tag></tag>
    <comment></comment>
    <origin>WEB_RECORDER</origin>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>c88dc932-2e97-4f88-95ce-4d5b986ef484</testCaseGuid>
+   <testCaseGuid>13e2481e-1f15-4325-920a-f6d10e0b0094</testCaseGuid>
    <testDataLinks>
       <combinationType>ONE</combinationType>
-      <id>1450d27a-4d72-4e7b-aa47-8684a61bec26</id>
+      <id>9468da8f-9e63-4281-a233-579c4dd9fb14</id>
       <iterationEntity>
          <iterationType>SPECIFIC</iterationType>
-         <value>5,9</value>
+         <value>7,11,12</value>
       </iterationEntity>
       <testDataId>Data Files/LoginData</testDataId>
    </testDataLinks>
    <variableLinks>
-      <testDataLinkId>1450d27a-4d72-4e7b-aa47-8684a61bec26</testDataLinkId>
+      <testDataLinkId>9468da8f-9e63-4281-a233-579c4dd9fb14</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>Email</value>
-      <variableId>5c9c3f68-65c9-4db3-883d-7737020f740b</variableId>
+      <variableId>58b3d42f-4d32-498a-b271-ad4bd7a03c24</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>1450d27a-4d72-4e7b-aa47-8684a61bec26</testDataLinkId>
+      <testDataLinkId>9468da8f-9e63-4281-a233-579c4dd9fb14</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>Password</value>
-      <variableId>cfe98945-7fc1-48bd-b508-58e5f9ba05ca</variableId>
+      <variableId>021c0588-9ad0-4a56-90d1-2a75fb9d2151</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>1450d27a-4d72-4e7b-aa47-8684a61bec26</testDataLinkId>
+      <testDataLinkId>9468da8f-9e63-4281-a233-579c4dd9fb14</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>ExpectedResult</value>
-      <variableId>30d01074-3eb9-4a62-b938-06529f6decc3</variableId>
+      <variableId>05c59ce8-d7dd-4e96-885f-5740392b2f06</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>5c9c3f68-65c9-4db3-883d-7737020f740b</id>
+      <id>58b3d42f-4d32-498a-b271-ad4bd7a03c24</id>
       <masked>false</masked>
       <name>email</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>cfe98945-7fc1-48bd-b508-58e5f9ba05ca</id>
+      <id>021c0588-9ad0-4a56-90d1-2a75fb9d2151</id>
       <masked>false</masked>
       <name>password</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>30d01074-3eb9-4a62-b938-06529f6decc3</id>
+      <id>05c59ce8-d7dd-4e96-885f-5740392b2f06</id>
       <masked>false</masked>
       <name>expectedResult</name>
    </variable>

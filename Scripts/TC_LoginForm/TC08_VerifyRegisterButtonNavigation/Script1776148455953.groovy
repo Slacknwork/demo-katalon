@@ -17,15 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//This test case verify elements of login form
+//This test case verify register button function in login form which is navigate to register form
 
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
+ * Step 3: Click on Regiter button
  */
-generalUtils.GeneralUtils.openLoginForm()
+generalUtils.GeneralUtils.openRegisterFormInLoginForm()
 
-//verify elements of login form
-generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
+//verify elements of register form
+generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.REGISTER_FORM)
 
 

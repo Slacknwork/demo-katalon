@@ -10,19 +10,17 @@
          <value>//h2[@class = 'font-bold text-3xl text-center' and (text() = 'Đăng ký tài khoản' or . = 'Đăng ký tài khoản')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//h2[@class='font-bold text-3xl text-center' and text()='Đăng ký tài khoản']</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@role='dialog' and @aria-modal='true']//h2[text()='Đăng ký tài khoản']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
