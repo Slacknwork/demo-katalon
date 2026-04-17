@@ -27,6 +27,20 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>1</initValue>
+      <name>LOGIN_ONCE</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>3</initValue>
+      <name>MULTIPLE_TRIES</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'LOGIN_FORM'</initValue>
       <name>LOGIN_FORM</name>
       <protected>false</protected>
@@ -129,19 +143,5 @@
       <name>MULTIPLE_FAILURE</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>3</initValue>
-      <name>MULTIPLE_TRIES</name>
-      <protected>false</protected>
-      <valueType>NUMBER</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>0</initValue>
-      <name>LOGIN_ONCE</name>
-      <protected>false</protected>
-      <valueType>NUMBER</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

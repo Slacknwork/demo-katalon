@@ -15,7 +15,7 @@ public class GeneralUtils {
 	@Keyword
 	static def openLoginForm() {
 		//Click avatar icon
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/icon_Avatar'))
+		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarPopupMenu/icon_Avatar'))
 		
 		//Click login button in popup menu
 		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarPopupMenu/button_Login'))
@@ -25,7 +25,7 @@ public class GeneralUtils {
 	@Keyword
 	static def openRegisterFormInLoginForm() {
 		//Click avatar icon
-		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/icon_Avatar'))
+		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarPopupMenu/icon_Avatar'))
 		
 		//Click login button in popup menu
 		loginUtils.LoginElements.clickElement(findTestObject('ImgAvatarPopupMenu/button_Login'))
@@ -36,32 +36,33 @@ public class GeneralUtils {
 	
 	//Verify elements is visible
 	@Keyword
-	static def isElementVisble(def to) {
-		//If to is list then verify each element in list
-		//If not then verify only to
-		if (to instanceof List) {
-			for (def object: to) {
-				WebUI.verifyElementVisible(findTestObject(object))
+	static def isElementVisble(def testObject) {
+		//If test object is list then verify each element in list
+		//If not then verify only single test object
+		if (testObject instanceof List) {
+			for (def object: testObject) {
+				WebUI.verifyElementVisible(findTestObject(object), FailureHandling.STOP_ON_FAILURE)
 			}
 		} else {
-			WebUI.verifyElementVisible(findTestObject(to))
+			WebUI.verifyElementVisible(findTestObject(testObject), FailureHandling.STOP_ON_FAILURE)
 		}
 	}
 	
 	//Verify elements is not visible
 	@Keyword
-	static def isElementNotVisble(def to) {
-		//If to is list then verify each element in list
-		//If not then verify only to
-		if (to instanceof List) {
-			for (def object: to) {
-				WebUI.verifyElementNotVisible(findTestObject(object))
+	static def isElementNotVisble(def testObject) {
+		//If test object is list then verify each element in list
+		//If not then verify only single test object
+		if (testObject instanceof List) {
+			for (def object: testObject) {
+				WebUI.verifyElementNotVisible(findTestObject(object), FailureHandling.STOP_ON_FAILURE)
 			}
 		} else {
-			WebUI.verifyElementNotVisible(findTestObject(to))
+			WebUI.verifyElementNotVisible(findTestObject(testObject), FailureHandling.STOP_ON_FAILURE)
 		}
 	}
 	
+	//get all elements file path in object repository folder, not include folder (if it in same folder)
 	@Keyword
 	static def getElementsFilePath(def filePath) {
 		List<String> elementsList = new ArrayList<String>()
@@ -74,64 +75,5 @@ public class GeneralUtils {
 		}
 		return elementsList
 	}
-	
-	//Verify elements in page based on forms
-	@Keyword
-	static def verifyElementsInForm(def form) {
-		
-		if (form.equals(GlobalVariable.LOGIN_FORM)){
-			//verify elements of login form
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/text_LoginTitle'), FailureHandling.CONTINUE_ON_FAILURE)
 			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/label_Email'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/input_email'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/label_Password'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/input_Password'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/button_Register'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/icon_Close'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-		} else if (form.equals(GlobalVariable.REGISTER_FORM)) {
-			//verify elements of register form
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/text_RegisterTitle'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Name'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/textbox_Name'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Email'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/textbox_Email'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Password'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/textbox_Password'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Phonenumber'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/textbox_Phonenumber'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Birthday'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/datetimepicker_Birthday'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/label_Gender'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementPresent(findTestObject('RegisterFormElements/dropdownMenu_Gender'), GlobalVariable.LONG_TIMEOUT)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/button_Register'), FailureHandling.CONTINUE_ON_FAILURE)
-			
-			WebUI.verifyElementVisible(findTestObject('RegisterFormElements/icon_Close'), FailureHandling.CONTINUE_ON_FAILURE)
-		}
-		
-	}
-	
-	
-	
 }
