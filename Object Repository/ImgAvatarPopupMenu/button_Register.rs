@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Đăng ký'][ancestor::div[@id='user-dropdown']]</value>
+         <value>//div[@id='user-dropdown']//button[text()='Đăng ký']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

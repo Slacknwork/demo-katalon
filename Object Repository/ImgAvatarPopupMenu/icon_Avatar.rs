@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[preceding-sibling::div[@id='user-dropdown']][following-sibling::button[@type='button']]</value>
+         <value>//button[preceding-sibling::div[@id='user-dropdown']][following-sibling::button[@type='button' and @aria-controls='navbar-user']]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

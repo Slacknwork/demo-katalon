@@ -10,11 +10,11 @@
          <value>//div[@class = 'ant-message-custom-content ant-message-error' and (text() = 'Email hoặc mật khẩu không đúng !' or . = 'Email hoặc mật khẩu không đúng !')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[./span[@role='img' and @aria-label='close-circle']][./span[text()='Email hoặc mật khẩu không đúng !']]</value>
+         <key>IMAGE</key>
       </entry>
       <entry>
-         <key>IMAGE</key>
+         <key>XPATH</key>
+         <value>//div[./span[@role='img' and @aria-label='close-circle']][./span[text()='Email hoặc mật khẩu không đúng !']]</value>
       </entry>
       <entry>
          <key>CSS</key>

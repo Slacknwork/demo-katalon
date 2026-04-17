@@ -24,13 +24,13 @@ import org.openqa.selenium.Keys as Keys
  * Step 2: Open Login form
  * Step 3: Fill email and password field
  * Step 4: Click on login button
+ * Step 5: Verify 'Invalid length' message visibility based on expected result
+ * 
+ * By verify 'wrong email and message' message visibility
+ * if this message is visible then 'Invalid length' message is not visible
  */
 loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-/**Verify 'Invalid length' message visibility based on expected result
- * By verify 'wrong email and message' message visibility
- * if this message is visible then 'Invalid length' message is not visible
- **/
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 
 

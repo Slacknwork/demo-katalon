@@ -23,10 +23,10 @@ import org.openqa.selenium.Keys as Keys
  * Step 1: Navigate to home page
  * Step 2: Open Login form
  * Step 3: Click on Regiter button
+ * Step 4: Verify elements of register form
  */
 generalUtils.GeneralUtils.openRegisterFormInLoginForm()
 
-//verify elements of register form
 loginUtils.LoginElements.verifyFormElements(GlobalVariable.REGISTER_FORM)
 
 

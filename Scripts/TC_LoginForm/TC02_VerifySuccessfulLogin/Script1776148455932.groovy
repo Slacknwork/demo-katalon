@@ -10,10 +10,10 @@ import internal.GlobalVariable
  * Step 2: Open Login form
  * Step 3: Fill email and password field
  * Step 4: Click on login button
+ * Step 5: Verify successful login message
  */
 loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-//Verify successful login message
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 
 

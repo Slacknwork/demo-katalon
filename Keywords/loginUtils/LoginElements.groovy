@@ -86,7 +86,7 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 	* Step 2: Fill email and password field
 	* Step 3: Click login button
 	*/
-	if (loginRetry == null || loginRetry > 0) {
+	if (loginRetry == null || loginRetry > 1) {
 		for (int i = 0; i < loginRetry; i++) {
 			loginUtils.LoginElements.login(email, password)
 		}
@@ -95,16 +95,17 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 	}
 }
 
+//Verify elements based on which form is chose
 @Keyword
 static def verifyFormElements(def form) {
-	switch(form) {
+	switch (form) {
 		case GlobalVariable.LOGIN_FORM:
-			List<String> loginFormElements = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
-			generalUtils.GeneralUtils.isElementVisble(loginFormElements)
+			List<String> loginFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
+			generalUtils.GeneralUtils.isElementVisble(loginFormElementsPath)
 			break
 		case GlobalVariable.REGISTER_FORM:
-			List<String> registerFormElements = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
-			generalUtils.GeneralUtils.isElementVisble(registerFormElements)
+			List<String> registerFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
+			generalUtils.GeneralUtils.isElementVisble(registerFormElementsPath)
 			break
 	}
 		
@@ -113,20 +114,17 @@ static def verifyFormElements(def form) {
 //Verify message visibility based on expected result
 @Keyword
 static def verifyMessageOfLoginTest(def expectedResult) {
-	
-	//nho fix FailureHandling
-	
 	switch (expectedResult) {
 		case GlobalVariable.SUCCESS:
-			//verify 'login successfully' message and user name visibility 
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyElementVisible(findTestObject('ImgAvatarPopupMenu/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
+			//verify 'login successfully' message and user name visibility
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/SuccessMessage/message_LoginSuccessfully')
+			generalUtils.GeneralUtils.isElementVisble('ImgAvatarPopupMenu/text_Username')
 			break;
 		case GlobalVariable.FAILURE:
 		case GlobalVariable.WRONG_EMAIL:
 		case GlobalVariable.WRONG_PASSWORD:
 			//Verify 'Wrong Email and Password' message visibility
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
 			break;
 		case GlobalVariable.MULTIPLE_FAILURE:
 		case GlobalVariable.INVALID_PASSWORD:
@@ -134,63 +132,42 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 		case GlobalVariable.LONG_PASSWORD:
 		case GlobalVariable.SHORT_PASSWORD:
 			//Verify 'Wrong Email and Password' message is not visible
-			WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
+			generalUtils.GeneralUtils.isElementNotVisble('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
 			break;
-		case GlobalVariable.EMPTY:
-			/**Verify 'No empty field!' message in based on expected result
-		 	* The error message is shown in their respectively empty field
-		 	* In EMPTY case, both email and password field is empty so need to error message for both
-		 	**/
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+		/**Verify 'No empty field!' message in based on expected result
+		* The error message is shown in their respectively empty field
+		* In EMPTY case, both email and password field is empty so need to error message for both**/
+		case GlobalVariable.EMPTY:			
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyEmail')
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
 		case GlobalVariable.EMPTY_EMAIL:
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyEmail')
 			break;
 		case GlobalVariable.EMPTY_PASSWORD:
-			WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
+			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
-		}
-	
-//	if (expectedResult.equals(GlobalVariable.SUCCESS)) {
-//		//verify 'login successfully' message
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/SuccessMessage/message_LoginSuccessfully'), FailureHandling.CONTINUE_ON_FAILURE)
-//		
-//		//verify user name visibility after login
-//		WebUI.verifyElementVisible(findTestObject('ImgAvatarPopupMenu/text_Username'), FailureHandling.CONTINUE_ON_FAILURE)
-//	}else if (expectedResult.equals(GlobalVariable.FAILURE) || 
-//		expectedResult.equals(GlobalVariable.WRONG_EMAIL) || 
-//		expectedResult.equals(GlobalVariable.WRONG_PASSWORD)) {
-//		
-//		//Verify 'Wrong Email and Password' message visibility based on expected result
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-//	}else if (expectedResult.equals(GlobalVariable.MULTIPLE_FAILURE) || 
-//		expectedResult == GlobalVariable.INVALID_PASSWORD ||
-//		expectedResult == GlobalVariable.LONG_EMAIL ||
-//		expectedResult == GlobalVariable.LONG_PASSWORD ||
-//		expectedResult == GlobalVariable.SHORT_PASSWORD ) {
-//		
-//		//Verify 'Wrong Email and Password' message is not visible based on expected result
-//		WebUI.verifyElementNotVisible(findTestObject('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword'))
-//	}else if (expectedResult.equals(GlobalVariable.EMPTY)) {
-//		/**Verify 'No empty field!' message in based on expected result
-//		 * The error message is shown in their respectively empty field
-//		 * In EMPTY case, both email and password field is empty so need to error message for both
-//		 **/
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-//	}else if (expectedResult.equals(GlobalVariable.EMPTY_EMAIL)) {
-//		
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyEmail'), FailureHandling.CONTINUE_ON_FAILURE)
-//	}else if (expectedResult.equals(GlobalVariable.EMPTY_PASSWORD)) {
-//		
-//		WebUI.verifyElementVisible(findTestObject('LoginFormElements/ErrorMessage/text_EmptyPassword'), FailureHandling.CONTINUE_ON_FAILURE)
-//	}
-	
-	
+		}	
 		
 }
 
 
-	
+
+
+
+
+//@Keyword
+//static def executeVerifyLoginMessages(def email, def password, def loginRetry, def expectedResult) {
+//	/**This function execute:
+//	* Step 1: Navigate to home page
+//	* Step 2: Open Login form
+//	* Step 3: Fill email and password field
+//	* Step 4: Click on login button
+//	*/
+//	loginUtils.LoginElements.executeLoginTest(email, password, loginRetry)
+//
+//	//Verify messages visibility of based on expected result
+//	loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
+//}
+
 }

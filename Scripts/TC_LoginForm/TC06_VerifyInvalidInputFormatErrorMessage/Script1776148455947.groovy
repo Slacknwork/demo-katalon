@@ -24,11 +24,12 @@ import org.openqa.selenium.Keys as Keys
  * Step 2: Open Login form
  * Step 3: Fill email and password field
  * Step 4: Click on login button
+ * Step 5: Verify invalid message visibility based on expected result
  */
 loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
 
-//Verify invalid message visibility based on expected result
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
+
 
 
 

@@ -9,14 +9,14 @@
          <key>BASIC</key>
       </entry>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='user-menu-button']/img/following-sibling::span[normalize-space(text())]</value>
+         <value>//button[@id='user-menu-button']/img/following-sibling::span[text()]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

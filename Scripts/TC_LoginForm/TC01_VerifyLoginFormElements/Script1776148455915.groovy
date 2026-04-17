@@ -22,10 +22,9 @@ import org.openqa.selenium.Keys as Keys
 /**This function execute:
  * Step 1: Navigate to home page
  * Step 2: Open Login form
+ * Step 3: Verify elements of login form
  */
 generalUtils.GeneralUtils.openLoginForm()
 
-//verify elements of login form
-//generalUtils.GeneralUtils.verifyElementsInForm(GlobalVariable.LOGIN_FORM)
 loginUtils.LoginElements.verifyFormElements(GlobalVariable.LOGIN_FORM)
 
