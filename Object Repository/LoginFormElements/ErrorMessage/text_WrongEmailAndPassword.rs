@@ -6,18 +6,18 @@
    <elementGuidId>5e45be97-330a-4432-bd03-8a0bd85e439f</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>IMAGE</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//div[@class = 'ant-message-custom-content ant-message-error' and (text() = 'Email hoặc mật khẩu không đúng !' or . = 'Email hoặc mật khẩu không đúng !')]</value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//div[./span[@role='img' and @aria-label='close-circle']][./span[text()='Email hoặc mật khẩu không đúng !']]</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
+         <value>//div[span[@aria-label='close-circle'] and span[text()='Email hoặc mật khẩu không đúng !']]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

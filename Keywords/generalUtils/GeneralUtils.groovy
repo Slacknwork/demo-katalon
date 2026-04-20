@@ -4,9 +4,10 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-import internal.GlobalVariable
+
 
 
 public class GeneralUtils {
@@ -36,7 +37,13 @@ public class GeneralUtils {
 	
 	//Verify elements is visible
 	@Keyword
-	static def isElementVisble(def testObject) {
+	static def isElementVisible(def testObject) {
+		//If test object is null, mark failed
+		if (testObject == null) {
+			KeywordUtil.markFailed("Test Object not found")
+			return
+		}
+		
 		//If test object is list then verify each element in list
 		//If not then verify only single test object
 		if (testObject instanceof List) {
@@ -51,6 +58,12 @@ public class GeneralUtils {
 	//Verify elements is not visible
 	@Keyword
 	static def isElementNotVisble(def testObject) {
+		//If test object is null, mark failed 
+		if (testObject == null) {
+			KeywordUtil.markFailed("Test Object not found")
+			return
+		}
+		
 		//If test object is list then verify each element in list
 		//If not then verify only single test object
 		if (testObject instanceof List) {

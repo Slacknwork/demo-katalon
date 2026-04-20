@@ -101,11 +101,11 @@ static def verifyFormElements(def form) {
 	switch (form) {
 		case GlobalVariable.LOGIN_FORM:
 			List<String> loginFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
-			generalUtils.GeneralUtils.isElementVisble(loginFormElementsPath)
+			generalUtils.GeneralUtils.isElementVisible(loginFormElementsPath)
 			break
 		case GlobalVariable.REGISTER_FORM:
 			List<String> registerFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
-			generalUtils.GeneralUtils.isElementVisble(registerFormElementsPath)
+			generalUtils.GeneralUtils.isElementVisible(registerFormElementsPath)
 			break
 	}
 		
@@ -117,14 +117,14 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 	switch (expectedResult) {
 		case GlobalVariable.SUCCESS:
 			//verify 'login successfully' message and user name visibility
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/SuccessMessage/message_LoginSuccessfully')
-			generalUtils.GeneralUtils.isElementVisble('ImgAvatarPopupMenu/text_Username')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/SuccessMessage/message_LoginSuccessfully')
+			generalUtils.GeneralUtils.isElementVisible('ImgAvatarPopupMenu/text_Username')
 			break;
 		case GlobalVariable.FAILURE:
 		case GlobalVariable.WRONG_EMAIL:
 		case GlobalVariable.WRONG_PASSWORD:
 			//Verify 'Wrong Email and Password' message visibility
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
 			break;
 		case GlobalVariable.MULTIPLE_FAILURE:
 		case GlobalVariable.INVALID_PASSWORD:
@@ -138,14 +138,14 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 		* The error message is shown in their respectively empty field
 		* In EMPTY case, both email and password field is empty so need to error message for both**/
 		case GlobalVariable.EMPTY:			
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyEmail')
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyPassword')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyEmail')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
 		case GlobalVariable.EMPTY_EMAIL:
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyEmail')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyEmail')
 			break;
 		case GlobalVariable.EMPTY_PASSWORD:
-			generalUtils.GeneralUtils.isElementVisble('LoginFormElements/ErrorMessage/text_EmptyPassword')
+			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
 		}	
 		

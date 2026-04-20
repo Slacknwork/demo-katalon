@@ -6,17 +6,17 @@
    <elementGuidId>398eca78-d007-4195-8f7c-1b8b49dbcd9f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//button[@type='button' and @aria-label='Close'][..//h2[text()='Đăng nhập']]</value>
-      </entry>
-      <entry>
          <key>IMAGE</key>
       </entry>
       <entry>
          <key>CSS</key>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h2[text()='Đăng nhập']/ancestor::div[@role='dialog']//button[@aria-label='Close']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
