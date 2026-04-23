@@ -7,6 +7,8 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 
 
 
@@ -35,6 +37,46 @@ public class GeneralUtils {
 		loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/button_Register'))
 	}
 	
+	//Verify elements is present
+	@Keyword
+	static def isElementPresent(def testObject) {
+		//If test object is null, mark failed
+		if (testObject == null) {
+			KeywordUtil.markFailed("Test Object not found")
+			return
+		}
+		
+		//If test object is list then verify each element in list
+		//If not then verify only single test object
+		if (testObject instanceof List) {
+			for (def object: testObject) {
+				WebUI.verifyElementPresent(findTestObject(object), GlobalVariable.LONG_TIMEOUT)
+			}
+		} else {
+			WebUI.verifyElementPresent(findTestObject(testObject), GlobalVariable.LONG_TIMEOUT)
+		}
+	}
+	
+	//Verify elements is not present
+	@Keyword
+	static def isElementNotPresent(def testObject) {
+		//If test object is null, mark failed
+		if (testObject == null) {
+			KeywordUtil.markFailed("Test Object not found")
+			return
+		}
+		
+		//If test object is list then verify each element in list
+		//If not then verify only single test object
+		if (testObject instanceof List) {
+			for (def object: testObject) {
+				WebUI.verifyElementNotPresent(findTestObject(object), GlobalVariable.TIMEOUT)
+			}
+		} else {
+			WebUI.verifyElementNotPresent(findTestObject(testObject), GlobalVariable.TIMEOUT)
+		}
+	}
+	
 	//Verify elements is visible
 	@Keyword
 	static def isElementVisible(def testObject) {
@@ -57,7 +99,7 @@ public class GeneralUtils {
 	
 	//Verify elements is not visible
 	@Keyword
-	static def isElementNotVisble(def testObject) {
+	static def isElementNotVisible(def testObject) {
 		//If test object is null, mark failed 
 		if (testObject == null) {
 			KeywordUtil.markFailed("Test Object not found")
@@ -82,7 +124,6 @@ public class GeneralUtils {
 		new File(filePath).eachFile { file -> 
 			if (file.getName().endsWith(".rs")) {
 				String path = file.getPath().replace("\\", "/").replace("Object Repository/", "").replace(".rs", "")
-				System.out.println(path)
 				elementsList.add(path)
 			}
 		}

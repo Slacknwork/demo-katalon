@@ -4,16 +4,19 @@
    <name>text_WrongEmailAndPassword</name>
    <tag></tag>
    <elementGuidId>5e45be97-330a-4432-bd03-8a0bd85e439f</elementGuidId>
+   <imagePath></imagePath>
    <selectorCollection>
       <entry>
          <key>IMAGE</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value></value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//div[@class = 'ant-message-custom-content ant-message-error' and (text() = 'Email hoặc mật khẩu không đúng !' or . = 'Email hoặc mật khẩu không đúng !')]</value>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -24,6 +27,7 @@
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
+         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

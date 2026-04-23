@@ -14,7 +14,7 @@ import internal.GlobalVariable
  * Step 4: Click on login button
  * Step 5: Verify 'Wrong Email and Password' message visibility of incorrect input
  */
-loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
+loginUtils.LoginElements.executeLoginTest(email, password)
 
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 

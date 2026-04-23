@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//h2[text()='Đăng ký tài khoản']/ancestor::div[@role='dialog']//button[@aria-label='Close']</value>
+         <value>//h2[text()='Đăng ký tài khoản']/ancestor::div[@role='dialog' and @aria-modal='true']//button[@aria-label='Close']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -52,14 +52,14 @@ static def clickElement(TestObject to) {
 static def fillAllLoginFields(def email, def password) {
 	//Wait for email field visibility and fill it
 	if (email != null ) {
-		TestObject emailTextbox = findTestObject('LoginFormElements/input_email')
+		TestObject emailTextbox = findTestObject('LoginFormElements/textbox_email')
 		WebUI.waitForElementVisible(emailTextbox, GlobalVariable.LONG_TIMEOUT)
 		WebUI.setText(emailTextbox, email)
 	}
 	
 	//Wait for password field visibility and fill it
 	if (password != null) {
-		TestObject passwordTextbox = findTestObject('LoginFormElements/input_Password')
+		TestObject passwordTextbox = findTestObject('LoginFormElements/textbox_Password')
 		WebUI.waitForElementVisible(passwordTextbox, GlobalVariable.LONG_TIMEOUT)
 		WebUI.setEncryptedText(passwordTextbox, password)
 	}
@@ -78,7 +78,7 @@ static def login(def email, def password) {
 	
 //Perform login test in login form
 @Keyword
-static def executeLoginTest(def email, def password, int loginRetry) {
+static def executeLoginTest(def email, def password) {
 	//Step 1: Open login form
 	generalUtils.GeneralUtils.openLoginForm()
 
@@ -86,13 +86,9 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 	* Step 2: Fill email and password field
 	* Step 3: Click login button
 	*/
-	if (loginRetry == null || loginRetry > 1) {
-		for (int i = 0; i < loginRetry; i++) {
-			loginUtils.LoginElements.login(email, password)
-		}
-	}else {
-		loginUtils.LoginElements.login(email, password)	
-	}
+	
+	loginUtils.LoginElements.login(email, password)	
+	
 }
 
 //Verify elements based on which form is chose
@@ -100,12 +96,24 @@ static def executeLoginTest(def email, def password, int loginRetry) {
 static def verifyFormElements(def form) {
 	switch (form) {
 		case GlobalVariable.LOGIN_FORM:
+			//When form is open
 			List<String> loginFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
 			generalUtils.GeneralUtils.isElementVisible(loginFormElementsPath)
+			
+			//When form is close
+			loginUtils.LoginElements.clickElement(findTestObject('LoginFormElements/icon_Close'))
+			generalUtils.GeneralUtils.isElementNotVisible(loginFormElementsPath)
+			generalUtils.GeneralUtils.isElementPresent(loginFormElementsPath)
 			break
 		case GlobalVariable.REGISTER_FORM:
+			//When form is open
 			List<String> registerFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
 			generalUtils.GeneralUtils.isElementVisible(registerFormElementsPath)
+			
+			//When form is close
+			loginUtils.LoginElements.clickElement(findTestObject('RegisterFormElements/icon_Close'))
+			generalUtils.GeneralUtils.isElementNotVisible(registerFormElementsPath)
+			generalUtils.GeneralUtils.isElementPresent(registerFormElementsPath)
 			break
 	}
 		
@@ -118,6 +126,7 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 		case GlobalVariable.SUCCESS:
 			//verify 'login successfully' message and user name visibility
 			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/SuccessMessage/message_LoginSuccessfully')
+			generalUtils.GeneralUtils.isElementNotPresent('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
 			generalUtils.GeneralUtils.isElementVisible('ImgAvatarPopupMenu/text_Username')
 			break;
 		case GlobalVariable.FAILURE:
@@ -132,10 +141,10 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 		case GlobalVariable.LONG_PASSWORD:
 		case GlobalVariable.SHORT_PASSWORD:
 			//Verify 'Wrong Email and Password' message is not visible
-			generalUtils.GeneralUtils.isElementNotVisble('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
+			generalUtils.GeneralUtils.isElementNotVisible('LoginFormElements/ErrorMessage/text_WrongEmailAndPassword')
 			break;
 		/**Verify 'No empty field!' message in based on expected result
-		* The error message is shown in their respectively empty field
+		* The error message is shown in their respectively empty field and not present if field is filled
 		* In EMPTY case, both email and password field is empty so need to error message for both**/
 		case GlobalVariable.EMPTY:			
 			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyEmail')
@@ -143,13 +152,17 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 			break;
 		case GlobalVariable.EMPTY_EMAIL:
 			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyEmail')
+			generalUtils.GeneralUtils.isElementNotPresent('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
 		case GlobalVariable.EMPTY_PASSWORD:
+			generalUtils.GeneralUtils.isElementNotPresent('LoginFormElements/ErrorMessage/text_EmptyEmail')
 			generalUtils.GeneralUtils.isElementVisible('LoginFormElements/ErrorMessage/text_EmptyPassword')
 			break;
 		}	
 		
 }
+
+
 
 
 
@@ -170,4 +183,20 @@ static def verifyMessageOfLoginTest(def expectedResult) {
 //	loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 //}
 
+
+////Verify elements based on which form is chose, before the form is open
+//@Keyword
+//static def verifyFormElementsBeforeOpenForm(def form) {
+//	switch (form) {
+//		case GlobalVariable.LOGIN_FORM:
+//			List<String> loginFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\LoginFormElements")
+//			generalUtils.GeneralUtils.isElementNotPresent(loginFormElementsPath)
+//			break
+//		case GlobalVariable.REGISTER_FORM:
+//			List<String> registerFormElementsPath = generalUtils.GeneralUtils.getElementsFilePath("Object Repository\\RegisterFormElements")
+//			generalUtils.GeneralUtils.isElementNotPresent(registerFormElementsPath)
+//			break
+//	}
+//
+//}
 }

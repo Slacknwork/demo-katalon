@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//h2[@class = 'font-bold text-3xl text-center' and (text() = 'Đăng ký tài khoản' or . = 'Đăng ký tài khoản')]</value>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>

@@ -29,7 +29,7 @@ import org.openqa.selenium.Keys as Keys
  * The error message is shown in their respectively empty field
  * In EMPTY case, both email and password field is empty so need to error message for both
  */
-loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
+loginUtils.LoginElements.executeLoginTest(email, password)
 
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 

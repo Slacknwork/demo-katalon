@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
  * Step 4: Click on login button
  * Step 5: Verify invalid message visibility based on expected result
  */
-loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.LOGIN_ONCE)
+loginUtils.LoginElements.executeLoginTest(email, password)
 
 loginUtils.LoginElements.verifyMessageOfLoginTest(expectedResult)
 

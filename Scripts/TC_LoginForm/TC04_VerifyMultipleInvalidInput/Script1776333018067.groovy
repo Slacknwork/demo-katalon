@@ -24,7 +24,12 @@ import org.openqa.selenium.Keys as Keys
  * Step 4: Click on login button
  * Step 5: Verify 'Wrong Email and Password' message is not visibe after mutiple login failed
  */
-loginUtils.LoginElements.executeLoginTest(email, password, GlobalVariable.MULTIPLE_TRIES)
+generalUtils.GeneralUtils.openLoginForm()
+
+//Login 3 tries with invalid input
+loginUtils.LoginElements.login(email, password)
+loginUtils.LoginElements.login(email, password)
+loginUtils.LoginElements.login(email, password)
 
 loginUtils.LoginElements.verifyMessageOfLoginTest(GlobalVariable.MULTIPLE_FAILURE)
 
