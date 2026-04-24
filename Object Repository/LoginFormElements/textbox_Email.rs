@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='email' and @placeholder='Vui lòng nhập tài khoản']</value>
+         <value>//input[@id='email'][contains(@placeholder, 'Vui lòng nhập tài khoản')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

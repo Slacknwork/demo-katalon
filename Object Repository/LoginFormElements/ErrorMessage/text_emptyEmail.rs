@@ -9,14 +9,14 @@
          <key>BASIC</key>
       </entry>
       <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
          <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='email']/following-sibling::p[text()='Vui lòng không bỏ trống']</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
+         <value>//input[@id='email']/following-sibling::p[contains(text(), 'Vui lòng không bỏ trống')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

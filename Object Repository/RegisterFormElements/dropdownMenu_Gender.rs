@@ -6,17 +6,17 @@
    <elementGuidId>b355d3d4-f3c1-43de-bebc-562fd82752e8</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>CSS</key>
       </entry>
       <entry>
          <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@name='gender'][.//input[@id='gender' and @role='combobox']]</value>
+         <value>//input[@id='gender']/ancestor::div[@name='gender']</value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@aria-modal='true' and @role='dialog']//h2[text()='Đăng nhập']</value>
+         <value>//div[@aria-modal='true' and @role='dialog']//h2[contains(text(),'Đăng nhập')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

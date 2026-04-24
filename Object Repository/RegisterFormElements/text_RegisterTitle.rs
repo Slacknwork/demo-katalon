@@ -6,15 +6,14 @@
    <elementGuidId>7d392033-fbb6-409f-b229-faf6896d90dd</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[@aria-modal='true' and @role='dialog']//h2[contains(text(),'Đăng ký tài khoản')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@aria-modal='true' and @role='dialog']//h2[text()='Đăng ký tài khoản']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

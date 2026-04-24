@@ -6,11 +6,11 @@
    <elementGuidId>3818650e-46a9-46c0-8d2f-e4ff49f33982</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//h2[contains(text(),'Đăng ký tài khoản')]/ancestor::div[@role='dialog' and @aria-modal='true']//button[@aria-label='Close']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//h2[text()='Đăng ký tài khoản']/ancestor::div[@role='dialog' and @aria-modal='true']//button[@aria-label='Close']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

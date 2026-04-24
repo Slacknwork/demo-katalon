@@ -6,17 +6,17 @@
    <elementGuidId>813d1cf9-08f7-4882-b73e-0d142fc5563f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>IMAGE</key>
+         <key>BASIC</key>
       </entry>
       <entry>
          <key>CSS</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[span[@aria-label='check-circle'] and span[text()='Đăng nhập thành công']]</value>
+         <value>//div[span[@aria-label='check-circle'] and span[contains(text(), 'Đăng nhập thành công')]]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

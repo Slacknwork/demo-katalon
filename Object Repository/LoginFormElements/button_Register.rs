@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Đăng ký'][following-sibling::button[@type='submit' and text()='Đăng nhập']]</value>
+         <value>//button[contains(text(),'Đăng ký')][following-sibling::button[@type='submit'][contains(text(), 'Đăng nhập')]]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

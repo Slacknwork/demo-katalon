@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for='email' and text()='Email']</value>
+         <value>//label[@for='email'][contains(text(), 'Email')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

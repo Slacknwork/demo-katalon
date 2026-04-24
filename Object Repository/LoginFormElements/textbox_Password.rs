@@ -9,12 +9,12 @@
          <key>BASIC</key>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='password' and @placeholder='Vui lòng nhập mật khẩu']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#password</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='password'][contains(@placeholder, 'Vui lòng nhập mật khẩu')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

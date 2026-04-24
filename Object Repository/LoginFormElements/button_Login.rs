@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@type='submit' and text()='Đăng nhập']</value>
+         <value>//button[@type='submit'][contains(text(), 'Đăng nhập')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

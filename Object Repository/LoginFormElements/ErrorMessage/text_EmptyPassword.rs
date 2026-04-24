@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='password']/following-sibling::p[text()='Vui lòng không bỏ trống']</value>
+         <value>//input[@id='password']/following-sibling::p[contains(text(), 'Vui lòng không bỏ trống')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

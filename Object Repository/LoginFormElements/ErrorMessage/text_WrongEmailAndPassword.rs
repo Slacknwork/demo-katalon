@@ -4,30 +4,25 @@
    <name>text_WrongEmailAndPassword</name>
    <tag></tag>
    <elementGuidId>5e45be97-330a-4432-bd03-8a0bd85e439f</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>BASIC</key>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>IMAGE</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[span[@aria-label='close-circle'] and span[text()='Email hoặc mật khẩu không đúng !']]</value>
+         <value>//div[span[@aria-label='close-circle'] and span[contains(text(), 'Email hoặc mật khẩu không đúng !')]]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value></value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>

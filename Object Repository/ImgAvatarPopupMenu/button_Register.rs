@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='user-dropdown']//button[text()='Đăng ký']</value>
+         <value>//div[@id='user-dropdown']//button[contains(text(),'Đăng ký')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

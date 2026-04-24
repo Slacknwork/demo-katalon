@@ -6,11 +6,11 @@
    <elementGuidId>6435c4bb-8804-4dc1-afc4-e69a275150d1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//label[@for='gender']/span[contains(text(), 'Gender')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//label[@for='gender']/span[text()='Gender']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
